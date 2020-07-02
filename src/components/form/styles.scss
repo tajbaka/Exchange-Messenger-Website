@@ -1,0 +1,119 @@
+@import "../common/styles";
+
+.form {
+    .label {
+        span {
+            font-size: 14px;
+            color: black;
+            opacity: 0.4;
+        }
+    }
+
+    .control-error {
+        margin-top: 10px;
+        font-family: $font-family-open-sans;
+        font-style: normal;
+        font-weight: normal;
+        font-size: 16px;
+        line-height: 135%;
+        letter-spacing: 0.01em;
+        color: #FB003F;
+        text-transform: capitalize;
+    }
+
+    .select {
+        height: 50px;
+        width: 100%;
+        &.default {
+            select {
+                width: 100%;
+                height: 100%;
+                background: #F8F8F8;
+                border: 2px solid rgba(0, 0, 0, 0.12);
+            }
+            &:after{
+                border-color: #05121D;
+                border-width: 2px;
+            }
+            &.error {
+                select {
+                    border-color: #FB003F !important;
+                }
+            }
+        }
+    }
+
+    input {
+        &.default {
+            height: 50px;
+            background: #F8F8F8;
+            border: 2px solid rgba(0, 0, 0, 0.12);
+            color: #05121D;
+            &.error {
+                border-color: #FB003F !important;
+            }
+        }
+    }
+
+    textarea {
+        &.default {
+            background: #F8F8F8;
+            border: 2px solid rgba(0, 0, 0, 0.12);
+            color: #05121D;
+            &.error {
+                border-color: #FB003F !important;
+            }
+        }
+    }
+
+    input:active, input:focus {
+        &.default {
+            border-color: #00AEEF !important;
+            box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.12);
+            &.error {
+                border-color: #FB003F !important;
+            }
+        }
+        
+    }
+
+    textarea:active, textarea:focus {
+        &.default {
+            border-color: #00AEEF !important;
+            box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.12);
+        }
+    }
+
+    .select:active, .select:focus-within {
+        &.default {
+            select {
+                border-color: #00AEEF !important;
+                box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.12);
+                color: #05121D;
+            }
+            &.error {
+                select {
+                    border-color: #FB003F !important;
+                }
+            }
+        }
+        
+    }
+}
+
+
+@include for-size(phone-only) {
+    .form {
+        .form-item {
+            width: 100%;
+        }
+    }
+}
+
+@include for-size(tablet-portrait-up) {
+    .form {
+        .form-item {
+            width: 100%;
+        }
+    }
+}

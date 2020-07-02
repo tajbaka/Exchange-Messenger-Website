@@ -1,0 +1,101 @@
+@import "../../components/common/styles";
+
+.page {
+    overflow: visible;
+    position: relative;
+    visibility: visible;
+}
+
+.page-map-gradient {
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+    background: linear-gradient(rgba(5,18,29,.70), rgba(5,18,29,.20));
+}
+
+.page-inner-wrapper {
+    overflow-x: hidden;
+}
+
+.navbar-burger {
+    display: none;
+}
+
+.main-header-navbar {
+    height: 116px;
+    margin-top: -116px;
+}
+
+.page-hero-wrapper {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+
+@include for-size(phone-only) {
+    .page-hero-wrapper {
+        padding-top: 50px;
+    }
+
+    .page {
+        .content-feature-content-wrapper {
+            .title, .description {
+                text-align: center !important;
+                padding: 20px 0;
+            }
+        }
+        .main-hero-icon-wrapper {
+            margin-top: 100px;
+        }
+        .content-feature-button-wrapper {
+            margin-top: 50px;
+        } 
+        .content-feature-button-wrapper {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    .main-header-navbar {
+        height: 50px;
+        margin-top: -116px;
+    }
+}
+
+@include for-size(tablet-portrait-up) {
+    .page-hero-wrapper {
+        padding-top: 50px;
+    }
+
+    .page {
+        .content-feature-content-wrapper {
+            .title, .description {
+                text-align: center !important;
+                padding: 20px 0;
+            }
+        }
+        .main-hero-icon-wrapper {
+            margin-top: 100px;
+        }
+        .content-feature-button-wrapper {
+            margin-top: 50px;
+        } 
+        .content-feature-button-wrapper {
+            display: flex;
+            justify-content: center;
+        }
+    }
+
+    .main-header-navbar {
+        height: 50px;
+        margin-top: -116px;
+    }
+}

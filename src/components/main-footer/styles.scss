@@ -1,0 +1,127 @@
+@import "../common/styles";
+
+.main-footer {
+    display: flex;
+    flex-direction: row;
+    padding: 100px 50px;
+    background: rgb(250, 250, 250);
+    h1 {
+        margin-bottom: 50px;
+        font-family: $font-family-montserrat;
+        font-style: normal;
+        font-weight: 800;
+        font-size: 24px;
+        color: #000000;
+    }
+    a {
+        font-family: $font-family-montserrat;
+        font-style: normal;
+        font-size: 15px;
+        line-height: 110%;
+    }
+
+    .category {
+        color: #05121D;
+        font-weight: bold;
+        pointer-events: none;
+    }
+
+    .item {
+        color: rgba(0, 0, 0, 0.75);
+        font-weight: 600;
+    }
+}
+
+.main-footer-left {
+    flex: 1;
+}
+
+.main-footer-center {
+    justify-content: center;
+    flex: 3;
+    .main-footer-row {
+        flex: 1;
+    }
+    a:not(:last-child) {
+        margin-bottom: 40px;
+    }
+    .main-footer-groups {
+        margin: 0 25px;
+    }
+}
+
+.main-footer > div {
+    display: flex;
+}
+
+.main-footer-column {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+.main-footer-groups {
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.main-footer-right {
+    align-items: flex-end;
+    justify-content: flex-end;
+    flex: 1;
+    .main-footer-groups {
+        flex-direction: row;
+        a:not(:last-child) {
+            margin-right: 25px;
+        }
+    }
+}
+
+.main-footer-left {
+    .content-image {
+        justify-content: center;
+    }
+}
+
+
+@include for-size(phone-only) {
+    .main-footer {
+        padding: 0; 
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .main-footer-left {
+        justify-content: center;
+    }
+    .main-footer-right {
+        margin-top: 70px;
+        justify-content: center;
+    }
+    .main-footer-center {
+        margin-top: 70px;
+        a {
+            text-align: center;
+        }
+    }
+}
+
+@include for-size(tablet-portrait-up) {
+    .main-footer {
+        padding: 0; 
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .main-footer-left {
+        justify-content: center;
+    }
+    .main-footer-right {
+        margin-top: 70px;
+        justify-content: center;
+    }
+    .main-footer-center {
+        margin-top: 70px;
+    }
+}

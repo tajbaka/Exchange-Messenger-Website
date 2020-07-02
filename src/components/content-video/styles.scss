@@ -1,0 +1,31 @@
+@import "../common/styles";
+
+.content-video {
+    &.is-active {
+        z-index: 1000;
+        margin: 0 !important;
+        .modal-content {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: initial;;
+        }
+    }
+    &:not(.is-active){
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+}
+
+@include for-size(tablet-portrait-up) {
+    .content-video {
+        width: 100% !important;
+    }
+}
+
+@include for-size(phone-only) {
+    .content-video {
+        width: 100% !important;
+    }
+}

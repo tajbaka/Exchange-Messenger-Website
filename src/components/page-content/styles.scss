@@ -1,0 +1,19 @@
+@import "../common/styles";
+
+@include for-size(phone-only) {
+    .page-content-inner-wrapper {
+        .content-simple {
+            width: initial !important;
+            min-width: initial !important;
+        }
+    }
+}
+
+@include for-size(tablet-portrait-up) {
+    .page-content-inner-wrapper {
+         .content-simple {
+            width: initial !important;
+            min-width: initial !important;
+        }
+    }
+}

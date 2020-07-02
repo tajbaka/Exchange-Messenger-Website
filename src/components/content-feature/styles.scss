@@ -1,0 +1,29 @@
+@import "../common/styles";
+
+.content-feature {
+    justify-content: space-between;
+    display: flex;
+}
+
+.content-feature-title {
+    font-family: $font-family-montserrat;
+    line-height: 110%;
+    padding: 12px 0;
+    margin-bottom: 0 !important;
+}
+
+.content-feature-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.content-feature-description {
+    font-family: $font-family-open-sans;
+    line-height: 135%;
+    padding: 12px 0;
+}
+
+.content-feature-button-wrapper {
+    margin-top: 30px;
+}

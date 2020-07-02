@@ -1,0 +1,47 @@
+@import "../common/styles";
+
+.button {
+    font-style: normal;
+    font-size: 15px;
+    height: 44px;
+    font-family: $font-family-montserrat;
+    
+    &.primary {
+        background: #00AEEF;
+        color: #FFFFFF;
+        border-color: transparent;
+        box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.12);
+        padding: 0px 40px;
+        font-weight: bold;
+        &.no-background {
+            color: #00AEEF;
+            box-shadow: none;
+            background: none;
+            border: none;
+        }
+    }
+    &.secondary {
+        background: #FFFFFF;
+        border: 2px solid white;
+        color: black;
+        box-shadow: 0px 2px 9px rgba(0, 0, 0, 0.12);
+        padding: 0px 40px;
+        font-weight: bold;
+        &.outlined {
+            background: none;
+            border: 1.5px solid #00AEEF;
+            color: #00AEEF;
+        }
+    }
+    &.basic {
+        padding: 0px 30px;
+        font-weight: 800;
+        font-size: 19px;
+    }
+    &.smooth-edges {
+        border-radius: 4px;
+    }
+    &.rounded {
+        border-radius: 100px;
+    }
+}

@@ -1,0 +1,289 @@
+@import "../common/styles";
+
+.content-simple {
+    display: flex;
+    flex-direction: column;
+
+    &.image-not-responsive {
+        .content-simple-image {
+            flex: 0 !important;
+        }
+    }
+    
+    &.text-last {
+        .content-simple-content {
+            order: 1;
+        }
+        .content-simple-image {
+            order: 0;
+        }
+    }
+
+    &.center-text-horizontally {
+        &.row {
+            .content-simple-content {
+                justify-content: center;
+                .content-simple-header {
+                    .title, .subtitle, .description {
+                        text-align: center !important;
+                    }
+                }
+            }
+            
+        }
+        &:not(.row) {
+            .content-simple-content {
+                align-items: center;
+                .content-simple-header {
+                    align-items: center;
+                    .title, .subtitle, .description {
+                        text-align: center !important;
+                    }
+                }
+            }
+        }
+    }
+
+    &.left-text-horizontally {
+        &.row {
+            .content-simple-content {
+                justify-content: flex-start;
+                .content-simple-header {
+                    .title, .subtitle, .description {
+                        text-align: start !important;
+                    }
+                }
+            }
+            
+        }
+        &:not(.row) {
+            .content-simple-content {
+                align-items: flex-start;
+                .content-simple-header {
+                    align-items: flex-start;
+                    .title, .subtitle, .description {
+                        text-align: start !important;
+                    }
+                }
+            }
+        }
+    }
+
+    &.right-text-horizontally {
+        &.row {
+            .content-simple-content {
+                justify-content: flex-end;
+                .content-simple-header {
+                    .title, .subtitle, .description {
+                        text-align: end !important;
+                    }
+                }
+            }
+            
+        }
+        &:not(.row) {
+            .content-simple-content {
+                align-items: flex-end;
+                .content-simple-header {
+                    align-items: flex-end;
+                    .title, .subtitle, .description {
+                        text-align: end !important;
+                    }
+                }
+            }
+        }
+    }
+    
+
+    &.center-text-vertically {
+        &.row {
+            .content-simple-content {
+                justify-content: center;
+            }
+        }
+        &:not(.row) {
+            .content-simple-content {
+                align-items: center;
+            }
+        }
+    }
+
+    &.bottom-text-vertically {
+        &.row {
+            .content-simple-content {
+                justify-content: flex-end;
+            }
+        }
+        &:not(.row) {
+            .content-simple-content {
+                align-items: flex-end;
+            }
+        }
+    }
+
+    &.top-text-vertically {
+        &.row {
+            .content-simple-content {
+                justify-content: flex-start;
+            }
+        }
+        &:not(.row) {
+            .content-simple-content {
+                align-items: flex-start;
+            }
+        }
+    }
+
+    &.buttons-end {
+        &.row {
+            .content-simple-content {
+                .buttons {
+                    align-items: flex-end;
+                    flex: 1;
+                }
+            }
+        }
+        &:not(.row) {
+            .content-simple-content {
+                .buttons {
+                    justify-content: flex-end;
+                }
+            }
+        }
+    }
+
+    &.buttons-center {
+        &.row {
+            .content-simple-content {
+                .buttons {
+                    align-items: center;
+                    flex: 1;
+                }
+            }
+        }
+        &:not(.row) {
+            .content-simple-content {
+                .buttons {
+                    justify-content: center;
+                }
+            }
+        }
+    }
+    
+}
+
+.content-simple-buttons {
+    padding-top: 20px;
+    display: flex;
+}
+
+.content-simple-buttons {
+    .button {
+        margin-right: 20px;
+    }
+}
+
+.content-simple-content, .content-simple-image {
+    display: flex;
+    flex-direction: column;
+}
+
+.content-simple-button {
+    margin-right: 30px !important;
+    margin-top: 30px !important;
+}
+
+.content-simple-buttons {
+    margin-top: -30px !important;
+}
+
+@include for-size(phone-only) {
+    .content-simple {
+        display: flex;
+        flex-direction: column;
+        &.image-not-responsive {
+            flex-direction: row;
+        }
+        max-width: 100%;
+        width: 100%;
+        &.row {
+            margin : 0;
+        }
+
+        &:not(.image-reorder-onmobile) {
+            .content-simple-content {
+                // margin-top: 30px;
+                order: 1 !important;
+            }
+            .content-simple-image {
+                order: 0;
+            }
+        }
+
+        &.image-reorder-onmobile {
+            .content-simple-content {
+                order: 0;
+            }
+            .content-simple-image {
+                order: 1;
+                // margin-top: 30px;
+            }
+        }
+
+        .content-simple-image {
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+        .content-simple-buttons {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}
+
+@include for-size(tablet-portrait-up) {
+    .content-simple {
+        display: flex;
+        flex-direction: column;
+        &.image-not-responsive {
+            flex-direction: row;
+        }
+
+        &.row {
+            margin : 0;
+        }
+        
+        &:not(.image-reorder-onmobile) {
+            .content-simple-content {
+                // margin-top: 30px;
+                order: 1 !important;
+                
+            }
+            .content-simple-image {
+                order: 0;
+
+            }
+        }
+
+        &.image-reorder-onmobile {
+            .content-simple-content {
+                order: 0;
+            }
+            .content-simple-image {
+                order: 1;
+                // margin-top: 30px;
+            }
+        }
+
+        .content-simple-image {
+            align-items: center;
+            justify-content: center;
+            display: flex;
+        }
+        .content-simple-buttons {
+            flex-direction: column;
+            align-items: center;
+        }
+    }
+}

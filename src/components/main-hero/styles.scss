@@ -1,0 +1,105 @@
+@import "../common/styles";
+
+    .main-hero {
+        display: flex;
+        .main-hero-content {
+            flex: 1;
+        }
+        .main-hero-icon-wrapper {
+            z-index: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex: 1;
+            z-index: 2;
+        }
+        .main-hero-border {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            img {
+                height: 100% !important;
+                width: 100% !important;
+            }
+        }
+        .main-hero-video {
+            position: absolute;
+            top: 20px;
+            bottom: 18px;
+            right: 19px;
+            left: 20px;
+            border-radius: 26px;
+            overflow: hidden;
+            video {
+                width: 100%;
+                max-width: initial;
+            }
+        }
+        .main-hero-image {
+            position: absolute;
+            right: 0;
+            left: 0;
+            bottom: 0;
+            top: 0;
+            align-items: initial !important;
+            visibility: hidden;
+            div {   
+                height: 100% !important; 
+                width: 100% !important;
+            }
+            &.selected { 
+                visibility: visible;
+            }
+        }
+        .main-hero-content {
+            z-index: 2;
+            display: flex;  
+            justify-content: center;
+            align-items: center;
+        }
+    }
+
+    .main-hero-map-gradient {
+        z-index: 1;
+        position: absolute;
+        top: 0;
+        right: 0;
+        left: 0;
+        bottom: 0;
+        background: linear-gradient(rgba(5,18,29,.70), rgba(5,18,29,.20));
+    }
+
+    @include for-size(tablet-portrait-up) {
+        .main-hero {
+            flex-direction: column;
+            padding-right: 20px !important;
+            padding-left: 20px !important;
+        }
+        .main-hero-content-feature {
+            margin-bottom: 20px;
+            z-index: 1;
+        }
+        .main-header-item {
+            text-align: center;
+        }
+    }
+
+
+    @include for-size(phone-only) {
+        .main-hero {
+            flex-direction: column;
+            padding-right: 20px !important;
+            padding-left: 20px !important;
+        }
+        .main-hero-content-feature {
+            margin-bottom: 20px;
+            z-index: 1;
+        }
+
+        .main-header-item {
+            text-align: center;
+        }
+    }
+    

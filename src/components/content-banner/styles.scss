@@ -1,0 +1,49 @@
+@import "../common/styles";
+
+.content-banner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-family: $font-family-open-sans;
+}
+
+.content-banner-left {
+    display: flex;
+    align-items: center;
+    max-width: 60%;
+}
+
+.content-banner-right {
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.content-banner-title {
+    margin-left: 15px;
+}
+
+@include for-size(phone-only) {
+    .content-banner {
+        flex-direction: column;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+    .content-banner-left {
+        max-width: initial;
+        margin-bottom: 20px;
+    }
+}
+
+@include for-size(tablet-portrait-up) {
+    .content-banner {
+        flex-direction: column;
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+    }
+    .content-banner-left {
+        max-width: initial;
+        margin-bottom: 20px;
+    }
+} 
+

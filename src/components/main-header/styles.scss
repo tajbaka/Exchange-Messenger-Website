@@ -1,0 +1,115 @@
+@import "../common/styles";
+
+.main-header-navbar {
+    background: transparent;
+    * {
+        outline: none;
+    }
+    &.is-active {
+        background: rgb(5, 18, 29) !important;
+        padding-bottom: 50px;
+        
+        .navbar-end {
+            display: flex;
+            flex-direction: column;
+            flex: 1;
+        }
+        .navbar-menu {
+            margin-top: 30px;
+        }
+        .navbar-button {
+            flex: 1;
+            a {
+                width: 100%;
+            }
+        }
+        .navbar-button:first-child, :not(.navbar-button) + .navbar-button {
+            margin-top: 30px;
+        }
+    }
+    .navbar-burger  {
+        height: 50px;
+        width: 100px;
+    }
+}
+
+.main-header-title {
+    margin-left: 20px;
+}
+
+.main-header-navbar {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    z-index: 1000;
+    background: transparent;
+}
+
+.main-header-navbar-top {
+    z-index: 1000;
+    position: absolute;
+    right: 0;
+    top: 25px;
+}
+
+.main-header-logo {
+    padding-left: 0;
+    img {
+        max-height: initial;
+    }
+}
+
+.main-header-navbar {
+    .navbar-brand {
+        align-items: center;
+        padding-top: 70px;
+    }
+}
+
+.navbar-menu  {
+    padding-top: 70px;
+    &.is-active {
+        box-shadow: none !important;
+        display: flex;
+        padding-bottom: 0;
+        .main-header-item:hover {
+            background-color: transparent;
+            color: white;
+            opacity: 1;
+        }
+        .main-header-item {
+            color: white;
+            opacity: 0.5;
+        }
+    }
+}
+
+@include for-size(phone-only) {
+    .main-header-navbar {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        .navbar-item {
+            margin-bottom: 20px;
+        }
+        .main-header-logo {
+            display: none;
+        }
+    }
+
+   
+}
+
+@include for-size(tablet-portrait-up) {
+    .main-header-navbar {
+        padding-left: 20px !important;
+        padding-right: 20px !important;
+        .navbar-end {
+            width: 100%;
+        }
+        .main-header-logo {
+            display: none;
+        }
+    }
+
+   
+}

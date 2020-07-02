@@ -1,0 +1,43 @@
+@import "../common/styles";
+
+.content-image {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    div {
+        max-width: initial;
+    }
+    img {
+        max-width: initial;
+    }
+}
+
+@include for-size(tablet-portrait-up) {
+    .content-image {
+        &:not(.no-grow) {
+            width: 100% !important;
+            div {
+                width: 100% !important;
+            }
+            img {
+                width: 100% !important;
+                height: initial !important;
+            }
+        }
+    }
+}
+
+@include for-size(phone-only) {
+    .content-image {
+        &:not(.no-grow) {
+            width: 100% !important;
+            div {
+                width: 100% !important;
+            }
+            img {
+                width: 100% !important;
+                height: initial !important;
+            }
+        }
+    }
+}

@@ -1,0 +1,57 @@
+@import "../../common/styles";
+
+.content-simple-header-description {
+    font-family: $font-family-open-sans;
+    padding: 12px 0;
+    line-height: 135%;
+    h1 {
+        font-weight: 600;
+    }
+}
+
+.content-simple-header {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    z-index: 1;
+    &.center {
+        align-items: center;
+    }
+}
+
+.content-simple-header-title {
+    font-family: $font-family-montserrat;
+    padding: 12px 0;
+    line-height: 110%;
+    span {
+        color: #ED416A;
+    }
+    h6 {
+        display: inline-flex;
+        opacity: 0.5;
+        font-weight: 500;
+    }
+}
+
+.content-simple-header-subtitle {
+    font-family: $font-family-montserrat;
+}
+
+
+@include for-size(phone-only) {
+    .content-simple-header-title, .content-simple-header-description, .content-simple-header-subtitle {
+        text-align: center !important;
+    }
+    .content-simple-buttons {
+        justify-content: center;
+    }
+}
+
+@include for-size(tablet-portrait-up) {
+    .content-simple-header-title, .content-simple-header-description, .content-simple-header-subtitle {
+        text-align: center !important;
+    }
+    .content-simple-buttons {
+        justify-content: center;
+    }
+}
