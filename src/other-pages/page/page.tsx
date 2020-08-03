@@ -513,7 +513,7 @@ export const pageQuery = graphql`
                       height
                       responsive
                     }
-                    button {
+                    buttons {
                       title
                       href
                       types

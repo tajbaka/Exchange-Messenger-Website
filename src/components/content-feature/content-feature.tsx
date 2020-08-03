@@ -11,7 +11,7 @@ export interface IContentFeatureProps {
     title: string;
     description: string;
     iconSrc?: string;
-    button?: any;
+    buttons?: Array<any>;
     icon?: any;
     imageSrc?: string;
     imageStyle?: ImageStyle;
@@ -34,7 +34,7 @@ export class ContentFeature extends React.Component<IContentFeatureProps> {
     }
 
     public render(){
-      const { className, imageStyle, imageSrc, button, description, title, descriptionStyle, titleStyle, iconStyle, iconSrc, onClick } = this.props;
+      const { className, imageStyle, imageSrc, buttons, description, title, descriptionStyle, titleStyle, iconStyle, iconSrc, onClick } = this.props;
       const classes = 'content-feature'; 
 
         return (
@@ -49,9 +49,13 @@ export class ContentFeature extends React.Component<IContentFeatureProps> {
                     {description &&
                         <div className={classNames("description", classes + "-description")} style={descriptionStyle as any} dangerouslySetInnerHTML={{__html: description}}/>
                     }
-                    <div className={classes + '-button-wrapper'}>
-                        <Button {...button} />
-                    </div>
+                    {buttons &&
+                        <div className={classes + '-button-wrapper'}>
+                            {buttons.map((element: any, index: any) => (
+                                <Button {...element} className={classes + '-button'} />
+                            ))}
+                        </div>
+                    }
                 </div>
                 {iconSrc &&
                     <div className={classNames(classes + '-icon-wrapper')} style={iconStyle}>

@@ -6,6 +6,7 @@ if(process.env.NODE_ENV !== 'production'){
 
 module.exports = {
   siteMetadata: {
+    siteUrl: `https://www.exchangemessenger.com`,
     title: `Gatsby Default Starter`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
@@ -13,7 +14,9 @@ module.exports = {
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-typescript`,
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-sass`,
+    'gatsby-plugin-robots-txt',
     {
       resolve: `gatsby-source-filesystem`,
       options: {
@@ -60,7 +63,14 @@ module.exports = {
       options: {
         pixelId: '2382313485393647'
       },
+    },
+    {
+      resolve: 'gatsby-plugin-robots-txt',
+      options: {
+        host: 'https://www.exchangemessenger.com',
+        sitemap: 'https://www.exchangemessenger.com/sitemap.xml',
+        policy: [{ userAgent: '*', allow: '/' }]
+      }
     }
-    
   ]
 }

@@ -11,8 +11,9 @@ export default function HTML(props: any) {
           name="viewport"
           content="width=device-width, initial-scale=1, shrink-to-fit=no"
         />
-        <meta name="description" content="Exchange Messenger is a free messaging app that does real-time app translation" />
-        <meta name="keywords" content="Language exchange, translation messaging" />
+        <meta name="title" content="Exchange Messenger" />
+        <meta name="description" content="Practice learning Spanish by messaging native speakers" />
+        <meta name="keywords" content="Exchange Messenger, Practice Spanish" />
         <meta name="author" content="Exchange Messenger Team" />
         <title>Exchange Messenger</title>
 
