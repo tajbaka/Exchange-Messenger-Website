@@ -10,7 +10,7 @@
     "@types/classnames": "^2.2.3",
     "@types/js-cookie": "^2.2.5",
     "@types/react-window-size": "^1.2.0",
-    "axios": "^0.19.2",
+    "axios": "^0.21.1",
     "bulma": "^0.8.0",
     "classnames": "^2.2.6",
     "dotenv": "^8.2.0",
