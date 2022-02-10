@@ -37,7 +37,7 @@
     "gatsby-transformer-sharp": "^2.3.14",
     "js-cookie": "^2.2.1",
     "mapbox-gl": "^1.8.0",
-    "node-sass": "^4.13.1",
+    "node-sass": "^7.0.0",
     "patch-package": "^6.2.0",
     "prop-types": "^15.7.2",
     "react": "^16.12.0",
